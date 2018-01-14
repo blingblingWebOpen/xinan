@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/content.css"/>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script language="javascript" type="text/javascript">
+//我的投资 切换列表 js+jquery-1.4.2.min.js
+					$(function(){
+							$(".my_inv_list h4 span").mousedown(function(){
+								   $(".tpgd").css("display","none");//默认所有为隐藏
+								   var li = $(this).attr("id").substring(0,1);
+								   var div = "#"+li+"tpgd";
+								   $(div).css("display","table");
+								})
+						}) 
+					$(function(){
+						$(".my_inv_list h4 span").mousedown(function(){
+								$(".my_inv_list h4 span").css({"background":"","height":"47px","border":"0"});//默认样式
+								$(this).css({"background":"#fff","height":"44px","border":"1px solid #e1e1e1","border-top":"3px solid #e61e2d","border-bottom":"0"});//鼠标经过的样式
+							})
+					})
+			 </script>
+<script type="text/javascript">
+//账户资产 左侧导航下的展开箭头上下变换
+				function img_onclick(){
+					var div = document.getElementById("menu_1");
+					if (div.style.display == "block") {
+						div.style.display = "none";
+						document.getElementById("menu_btn1").style.backgroundPosition = "10px 0px";
+					} else if (div.style.display == "none") {
+						div.style.display = "block";
+						document.getElementById("menu_btn1").style.backgroundPosition = "10px -42px";
+					}
+				} 
+				
+				
+				function img_onclick2(){
+					var div = document.getElementById("menu_2");
+					if (div.style.display == "block") {
+						div.style.display = "none";
+						document.getElementById("menu_btn2").style.backgroundPosition = "10px 0px";
+					} else if (div.style.display == "none") {
+						div.style.display = "block"
+						document.getElementById("menu_btn2").style.backgroundPosition = "10px -42px";
+					}
+				} 
+</script>
+<title>账户资产-合同列表</title>
+</head>
+
+<body>
+<div class="top_bg">
+<div class="top">
+	<img src="images/phone.png"  height="42" class="phone" alt="" title="" />
+    <ul>
+    	<li><a href="#">服务指南</a></li>
+        <li><a href="#">信息披露</a></li>
+        <li><a href="#">安全保障</a></li>
+        <li class="login"><a href="#">登录</a></li>
+        <li><a href="#">免费注册</a></li>
+    </ul>
+</div>
+</div>
+<div class="nav_bg">
+<div class="nav">
+	<div class="logo"><a href="Index.html" title=""><img src="images/login.png"  height="96" alt="" title="" /></a></div>
+    <div class="nav_right">
+    	<ul>
+        	<li><a href="Index.html">首 页</a></li>
+            <li><a href="ProList.html">理财频道</a></li>
+            <li><a href="#">转让专区</a></li>
+            <li><a href="AccountAssets.html" class="cur">账户资产</a></li>
+        </ul>
+        <div class="nav_join">
+        	<a href="#">申请加盟</a>
+        </div>
+    </div>
+</div></div>
+<!--账户资产-我的投资-->
+<div class="acc_con">
+	<div class="acc_left">
+    	<!--头像-个人信息-->
+    	<div class="acc_myinfo">
+        	<dl>
+            	<dt><img src="images/ico_phone.jpg" width="41" height="41" /></dt>
+                <dd>
+                	<p>青菜盖浇饭青菜盖</p>
+                    <a href="#"><img src="images/ico_4.png"  height="12" /></a><a href="#"><img src="images/ico_5.png"  height="12"/></a><a href="#"><img src="images/ico_6.png"  height="12" /></a><a href="#"><img src="images/ico_7_1.png"  height="12" /></a>
+                </dd>
+            </dl>
+        </div>
+        <!--可用余额-->
+    	<div class="acc_balance">
+        	<h4>可用余额</h4>
+            <p>&yen;&nbsp;0.00</p>
+            <div class="floatclear"></div>
+            <input type="button" value="充  值" class="" style="margin-right:12px;" /><input type="button" value="提  现" class="" />
+        </div>
+        <!--导航菜单-->
+        <div class="acc_nav">
+        
+        	<dl>
+            	<dt><a href="AccountAssets.html" class="accnav1">我的投资</a></dt>
+                <dt><a href="MySssignment.html" class="accnav2">我的转让</a></dt>
+                <dt><a href="CapitalManagement.html" class="accnav3">资金管理</a><em id="menu_btn1" onclick="img_onclick()" ></em></dt>
+                <dd style="display:none;" id="menu_1">                	
+                    <a href="AccountAssetscongzhi.html">充值</a>
+                    <a href="AccountAssetstixian.html">提现</a>
+                </dd>
+                <dt  class="cur"><a href="ContractList.html" class="accnav4" >合同列表</a></dt>
+                <dt><a href="" class="accnav5">账户管理</a><em id="menu_btn2" onclick="img_onclick2()"></em></dt>
+               	<dd style="display:none" id="menu_2">
+                	<a href="#">实名认证</a>
+                    <a href="EmailAuthentication.html">邮箱认证</a>
+                    <a href="#">手机认证</a>
+                    <a href="#">登录密码</a>
+                    <a href="BankCard.html">绑定银行卡</a>
+                    <a href="ThirdParty.html">绑定第三方支付</a>
+                </dd>
+            </dl>
+            <div class="floatclear"></div>
+        </div>
+    </div>
+    <div class="acc_right">
+    	<div class="my_investment">
+        	<h2 class="my_inv_title">合同列表</h2>
+            <div class="my_inv_total">
+            	<h5>0</h5>
+                <p>认购合同（份）</p>
+            </div>
+            <div class="my_inv_have">
+            	<h5>0</h5>
+                <p>转让合同（份）</p>
+            </div>
+            <div class="floatclear"></div>
+            <div class="my_inv_list">
+            
+            	<h4><span style="background:#fff; height:44px; border:1px solid #e1e1e1; border-top:3px solid #e61e2d; border-bottom:0;" id="1my_inv_list">持有中</span><span id="2my_inv_list">已转让</span><span id="3my_inv_list">已结算</span><span class="my_inv_recovery" id="4my_inv_list">已删除</span></h4> 		
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tpgd" id="1tpgd" style="display:table;">
+                	<tr>
+                    	<th align="left">电子编号</th>
+                        <th align="center" width="150">投资产品</th>
+                        <th align="center" width="100">投资时间</th>
+                        <th align="center" width="100">预期年化收益率</th>
+                        <th align="center" width="100">投资金额（&yen;）</th>
+                        <th align="center" width="50">状态</th>
+                        <th align="center" width="40">保全</th>
+                    </tr>
+                    <tr>
+                    	<td align="left">钱塘江二塘江二期</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                    <tr>
+                    	<td align="left">钱塘江二期</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                    <tr>
+                    	<td align="left">钱塘江二期</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                    <tr>
+                    	<td align="left">钱塘江二期钱塘江期</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                    <tr>
+                    	<td align="left">钱塘江二期</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tpgd" id="2tpgd" style="display:none;">
+                	<tr>
+                    	<th align="left">电子编号</th>
+                        <th align="center" width="150">投资产品</th>
+                        <th align="center" width="100">投资时间</th>
+                        <th align="center" width="100">预期年化收益率</th>
+                        <th align="center" width="100">投资金额（&yen;）</th>
+                        <th align="center" width="50">状态</th>
+                        <th align="center" width="40">保全</th>
+                    </tr>
+                    <tr>
+                    	<td align="left">钱塘江二塘江二期</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                    <tr>
+                    	<td align="left">钱塘江二期</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tpgd" id="3tpgd" style="display:none;">
+                	<tr>
+                    	<th align="left">电子编号</th>
+                        <th align="center" width="150">投资产品</th>
+                        <th align="center" width="100">投资时间</th>
+                        <th align="center" width="100">预期年化收益率</th>
+                        <th align="center" width="100">投资金额（&yen;）</th>
+                        <th align="center" width="50">状态</th>
+                        <th align="center" width="40">保全</th>
+                    </tr>
+                    <tr>
+                    	<td align="left">245425424</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                </table>
+                
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tpgd" id="4tpgd" style="display:none;">
+                	<tr>
+                    	<th align="left">电子编号</th>
+                        <th align="center" width="150">投资产品</th>
+                        <th align="center" width="100">投资时间</th>
+                        <th align="center" width="100">预期年化收益率</th>
+                        <th align="center" width="100">投资金额（&yen;）</th>
+                        <th align="center" width="50">状态</th>
+                        <th align="center" width="40">保全</th>
+                    </tr>
+                    <tr>
+                    	<td align="left">245fsdfds肥嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟的4</td>
+                        <td align="center">2014-12-12 14:55</td>
+                        <td align="center">50万元</td>
+                        <td align="center">8.3%</td>
+                        <td align="center">5000元</td>
+                        <td align="center">6000元</td>
+                        <td align="center">查看</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+  	</div>
+    <div class="floatclear"></div>
+</div>
+
+<div class="footer_bg1">
+  <div class="footer_bg2">
+    <div class="footer">
+      <div class="footer_con">
+      	<div class="footer_logo"><a href="#"><img src="images/footer_logo.png" width="159" height="106" /></a></div>
+        <div class="footer_nav">
+       	  <h5>关于我们</h5>
+            <p><a href="#">平台简介</a> <a href="#">运营模式</a> <a href="#">平台证照</a> <a href="#">平台优势</a> <a href="#">合作伙伴</a> <a href="#">联系我们</a></p>
+          <h5>主要项目</h5>
+          <p><a href="#">民生宝</a> <a href="#">五水融</a> <a href="#">运财宝</a> <a href="#">PPPe宝</a> <a href="#">定制e盈</a></p>
+          <h5>其他</h5>
+          <p><a href="#">安全保障</a> <a href="#">服务指南</a> <a href="#">推荐规则</a> <a href="#">转让规则</a> <a href="#">免责声明</a></p>
+        </div>
+        <div class="footer_contact">
+        	<h4>400电话客服<br />（工作时间 周一至周五8:30-17:00）</h4>
+            <h3>4000-000-000</h3>
+            <div class="ico_contact">
+            	<a href="#" class="ico_sina"></a>
+                <a href="#" class="ico_qq">400855855</a>
+                <div class="floatclear"></div>
+            </div>
+            <div class="ico_contact">
+            	<a href="#" class="ico_wx"></a>
+                <a href="#" class="ico_email">6f564654@sina.com</a>
+                <div class="floatclear"></div>
+            </div>
+        </div>
+        <div class="footer_join">
+        	<a href="#">申请加盟</a>
+            <a href="#">加盟规则</a>
+        </div>
+      </div>
+      <div class="copyright">
+      
+          <div class="footer_ico"><img src="images/img1.png" width="99" height="35" /><img src="images/img2.png" width="99" height="35" /><img src="images/img3.png" width="39" height="35" /><img src="images/img4.png" width="39" height="35" /><img src="images/img5.png" width="99" height="35" /></div>
+          <p>464654@qq.com 浙icp备4564646号-1<br />
+            法律顾问：浙江文三路事务所</p>
+     
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

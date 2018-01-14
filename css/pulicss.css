@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*此样式为公共页面*/
+
+/*Newlist 新闻列表页面*/
+.Newcenter{width: 1100px; height: auto; margin: 0 auto;}
+.Newcenter h2{font: normal 16px/32px "微软雅黑"; color: #626060;}
+
+.news{width: 1100px; height: 452px; border: 1px solid #d8d8d8;}
+.newtitle{ float: left; width: 132px; height: 452px; background: #ecebeb;}
+.newtitle dd{}
+.newtitle dd a{display: block; width: 132px; height: 80px;
+font: bold 14px/80px "微软雅黑"; text-align: center;  color: #000;margin-bottom: 5px; }
+.newtitle dd a:hover{background:#fff ; }
+
+
+.newce{float: left; width: 954px; height: 450px;padding-left: 14px; background: #fff;}
+.newce ul{ width: 920px;}
+.newce ul li{height: 51px; font: normal 15px/50px "微软雅黑"; border-bottom: 1px dashed #d2d2d2;padding-top: 8px;}
+.newce ul li a{display: block;float: left; text-indent: 6px;}
+.newce ul li span{display: block; float: right;}
+
+.page{width: 184px; height: 32px; margin: 0 auto;margin-top:6px;}
+.page a{display: block;float: left; width: 20px; height: 20px; margin-left: 5px;  font: normal 16px/20px "微软雅黑"; text-align: center; background: none; color: #333; border-radius:3px; ;}
+.page a.one,.page a:hover{background: #FF0000; color: #fff;}
+.page a.down{background: #bfbfbf; color: #fff;}
+ 
+
+/*News 新闻详情页*/
+.newss{width: 1100px; height: auto; margin: 0 auto;}
+.newleft{float:left; width: 716px;  border: 1px solid #f3f2f2;background: #fff; padding-top: 20px; padding-left: 20px; padding-right: 20px;}
+.newleft h2{font: normal 24px/24px ""微软雅黑"";}
+
+.newright{float:right;width:294px;  border: 1px solid #F3F2F2;background: #fff;padding-top:22px ; padding-left: 28px;}
+.newright h2{float:left; width: 274px; height: 36px; font: normal 18px/18px "微软雅黑";}
+.newright h2 a{display: block; float: right; font: normal 14px/14px "微软雅黑"; color: #1155a2;bottom: 0px;}
+.newright ul{margin-top: 0px;width: 274px;}
+.newright ul li{font: normal 14px/35px "微软雅黑"; width: 274px;}

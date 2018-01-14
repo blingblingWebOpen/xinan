@@ -1,0 +1,88 @@
+﻿
+/*公用css*/
+*{ margin:0px; padding:0px;}
+body{ font-size:12px; color:#333; background:#eee url(../images/bg.jpg) repeat;font-family:SimSun; }
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,a,big, em,font,img,strong,tt, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
+ label, table, caption, tbody, tfoot, thead, tr, th, td, marquee, input, select{  margin:0px; padding:0px;}
+img{ border:0px;}
+ul{ list-style:none;}
+a{ text-decoration:none; color:#333;}
+a:hover{ color:#F00;}
+a:active{ color:#900;}
+.floatclear{ clear:both; height:0; font-size:0;}
+.colorred{color: #ffa61a;}
+
+
+
+.top_bg{ width:100%; height:42px; background:#f1f1f1; border-bottom:1px solid #ddd; overflow:hidden; }
+.top{ width:1100px; height:42px; margin:0 auto;}
+	.top img.phone{ float:left;}
+	.top ul{ float:right;}
+		.top ul li{ float:left; margin-right:15px;}
+			.top ul li a{ font:normal 12px/42px "Microsoft YaHei"; color:#333;}
+			.top ul li a:hover{ color:red; text-decoration:underline;}
+		.top ul li.login{ width:88px; background:#d01a0b;}
+			.top ul li.login a{ color:#fff; background:url(../images/ico_2.png) no-repeat 25px 14px; float:left; width:48px; overflow:hidden; padding-left:40px;}
+
+.nav_bg{ width: 400px;
+height: 96px;
+position: relative;
+left: 270px;
+top: 309px;
+overflow:hidden;}
+.nav{ margin:0 auto; height:96px; }
+	.logo{ float:left;}
+		/*.nav_right{position: relative;
+left: 293px;
+top: 309px;}/*3，3改李琼*/*/
+		.nav_right ul{ float:left; height:40px; margin-right:15px;}
+			.nav_right ul li{ float:left;}
+			.nav_right ul li a{ padding:0 20px; font:normal 18px/40px "Microsoft YaHei";}
+			.nav_right ul li a:hover,.nav_right ul li a.cur{ text-decoration:underline; color:#a41b1c;}
+		.nav_right .nav_join{ float:left; width:128px; height:39px; }
+			.nav_right .nav_join a{float:right; width:128px; height:39px; background:url(../images/join_btnbg.png) no-repeat; text-align:center;  font:normal 12px/39px "Microsoft YaHei";}
+			.nav_right .nav_join a:hover,.nav_right .nav_join a.cur{ background:url(../images/join_btnbg2.png) no-repeat; color:#fff; }
+
+
+.footer_bg1{ width:100%; border-top:1px solid #464646; margin-top:25px;}
+.footer_bg2{ width:100%; background:#414142; border-top:1px solid #636363; }
+.footer_con{ width:1100px; height:166px; margin:0 auto; border-bottom:1px solid #323232; padding:27px 0;}
+	.footer_logo{ float:left; width:195px; height:166px; border-right:1px dashed #7e7e7e; text-align:center;}
+		.footer_logo img{ margin-top:20px;}
+	.footer_nav{ float:left; width:404px; height:166px; border-right:1px dashed #7e7e7e; padding-left:26px;}
+		.footer_nav h5{ color:#afafaf; font:bold 14px/24px SimSun; margin-top:6px;}
+		.footer_nav p{ padding-left:30px;}
+			.footer_nav p a{ color:#afafaf;  font:normal 12px/24px SimSun;}
+			.footer_nav p a:hover{ color:#fff; text-decoration:underline;}
+	.footer_contact{ float:left; width:270px; height:166px; border-right:1px dashed #7e7e7e; padding-left:30px;}
+		.footer_contact h4{ font:normal 14px/22px "Microsoft YaHei"; color:#afafaf;}
+		.footer_contact h3{ font:bold 22px/40px "Microsoft YaHei"; color:#eee;}
+		.ico_contact{ margin-top:10px;}
+			.ico_contact a.ico_sina{ float:left; width:29px; height:29px; background:url(../images/ico_sina.png) no-repeat; margin-right:10px;}
+				.ico_contact a.ico_sina:hover{ background:url(../images/ico_sina2.png) no-repeat; }
+			.ico_contact a.ico_qq{ float:left;  width:172px; height:29px; background:url(../images/ico_qq.png) no-repeat; padding-left:36px; color:#eee;font:normal 14px/29px SimSun; }
+				.ico_contact a.ico_qq:hover{ background:url(../images/ico_qq2.png) no-repeat; }
+			.ico_contact a.ico_wx{ float:left;  width:29px; height:29px; background:url(../images/ico_wx.png) no-repeat; margin-right:10px;}
+				.ico_contact a.ico_wx:hover{ background:url(../images/ico_wx2.png) no-repeat; }
+			.ico_contact a.ico_email{ float:left;  width:172px; height:29px; background:url(../images/ico_email.png) no-repeat; padding-left:36px; color:#eee; font:normal 14px/29px SimSun; }
+				.ico_contact a.ico_email:hover{ background:url(../images/ico_email2.png) no-repeat; }
+			
+	.footer_join{ float:left; width:172px; height:166px;}
+		.footer_join a{ float:left; width:124px; height:46px; background:url(../images/footer_btn1.png) no-repeat; color:#afafaf; text-align:center; font:normal 16px/46px "Microsoft YaHei"; margin-left:24px; display:inline; margin-top:24px;}
+		.footer_join a:hover{ background:url(../images/footer_btn2.png) no-repeat; color:#fff;}
+.copyright{ width:1100px; height:68px; margin:0 auto; border-top:1px solid #4e4e4f; padding-top:24px; }
+	.copyright .footer_ico{ float:left; margin-left:230px; display:inline;}
+	.copyright .footer_ico img{ margin:0 7px;}
+	.copyright p{ color:#fff; float:left; line-height:17px; }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<link rel="stylesheet" type="text/css" href="css/base2.css"/>
+<link rel="stylesheet" type="text/css" href="css/index2.css"/>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/comparison.js"></script>
+<script type="text/javascript">
+function banner(){	
+	var bn_id = 0;
+	var bn_id2= 1;
+	var speed33=5000;
+	var qhjg = 1;
+    var MyMar33;
+	$("#banner .d1").hide();
+	$("#banner .d1").eq(0).fadeIn("slow");
+	if($("#banner .d1").length>1)
+	{
+		$("#banner_id li").eq(0).addClass("nuw");
+		function Marquee33(){
+			bn_id2 = bn_id+1;
+			if(bn_id2>$("#banner .d1").length-1)
+			{
+				bn_id2 = 0;
+			}
+			$("#banner .d1").eq(bn_id).css("z-index","2");
+			$("#banner .d1").eq(bn_id2).css("z-index","1");
+			$("#banner .d1").eq(bn_id2).show();
+			$("#banner .d1").eq(bn_id).fadeOut("slow");
+			$("#banner_id li").removeClass("nuw");
+			$("#banner_id li").eq(bn_id2).addClass("nuw");
+			bn_id=bn_id2;
+		};
+	
+		MyMar33=setInterval(Marquee33,speed33);
+		
+		$("#banner_id li").click(function(){
+			var bn_id3 = $("#banner_id li").index(this);
+			if(bn_id3!=bn_id&&qhjg==1)
+			{
+				qhjg = 0;
+				$("#banner .d1").eq(bn_id).css("z-index","2");
+				$("#banner .d1").eq(bn_id3).css("z-index","1");
+				$("#banner .d1").eq(bn_id3).show();
+				$("#banner .d1").eq(bn_id).fadeOut("slow",function(){qhjg = 1;});
+				$("#banner_id li").removeClass("nuw");
+				$("#banner_id li").eq(bn_id3).addClass("nuw");
+				bn_id=bn_id3;
+			}
+		})
+		$("#banner_id").hover(
+			function(){
+				clearInterval(MyMar33);
+			}
+			,
+			function(){
+				MyMar33=setInterval(Marquee33,speed33);
+			}
+		)	
+	}
+	else
+	{
+		$("#banner_id").hide();
+	}
+}
+</script>
+<title>首页</title>
+</head>
+
+<body>
+<div class="top_bg">
+  <div class="top"> <img src="images/phone.png"   height="42" class="phone" alt="" title="" />
+    <ul>
+      <li><a href="#">服务指南</a></li>
+      <li><a href="#">信息披露</a></li>
+      <li><a href="#">安全保障</a></li>
+      <li class="login"><a href="#">登录</a></li>
+      <li><a href="Register.html">免费注册</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="mmain">
+	<div class="main">
+		<!--<div class="nav_bg">
+			  <div class="nav">
+			    <div class="nav_right">
+			      <ul>        
+			         <li><a href="../ProList.aspx"><img src="images/nav1.png" /></a></li>
+			                    <li><a href="#"><img src="images/nav2.png" /></a></li>
+			                    <li><a href="../AccountAssets.aspx"><img src="images/nav3.png" /></a></li>
+			      </ul>
+			
+			    </div>
+			  </div>
+</div>-->
+		<!--广告区-->
+		<div class="banner" id="banner" > <a href="#" class="d1" style="background:url(images/bannerpic.png) no-repeat;"></a> 		<a href="#" class="d1" style="background:url(images/banner2.jpg) no-repeat;"></a>
+		  <div class="d2" id="banner_id">
+		    <ul>
+		      <li></li>
+		      <li></li>
+		    </ul>
+		  </div>
+		</div>
+		<script type="text/javascript">banner()</script> 
+		
+		<!--灯笼-->
+		<div class="pro_sp">
+			<img class="spe1" src="images/lantern.png"/>
+			</div>
+		<div class="pro_sp">	
+			<img class="spe2" src="images/lantern.png"/>
+			</div>
+	</div>
+	
+	
+</div>
+
+<div class="floatclear"></div>
+<!--产品特色-->
+<div class="pro_features_bg">
+  <div class="pro_features">
+    <dl>
+      <dt><img src="images/teapot1.png" width="95" height="87" /></dt>
+      <dd>
+        <h6>安全保障计划</h6>
+        <p>权威担保机构 ，五重风控审核<br />银行级加密技术 </p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><img src="images/teapot2.png" width="95" height="87" /></dt>
+      <dd>
+        <h6>资深团队管理</h6>
+        <p>全球移动互联网最佳互联网金融奖<br />数十家银行长期深度合作</p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><img src="images/teapot3.png" width="95" height="87" /></dt>
+      <dd>
+        <h6>一亿财主选择</h6>
+        <p>五年专注个人理财<br />累计123.56亿零风险投资</p>
+      </dd>
+    </dl>
+    <!--<dl>
+      <dt><img src="images/pro_feat4.png" width="82" height="82" /></dt>
+      <dd>
+        <h6>灵活便捷</h6>
+        <p>60天后可转让</p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><img src="images/pro_feat5.png" width="82" height="82" /></dt>
+      <dd>
+        <h6>法律保障</h6>
+        <p>六和律师事务所提供</p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><img src="images/pro_feat6.png" width="82" height="82" /></dt>
+      <dd>
+        <h6>信息透明</h6>
+        <p>充分信息披露、完整</p>
+      </dd>
+    </dl>
+    <dl>
+      <dt><img src="images/pro_feat7.png" width="82" height="82" /></dt>
+      <dd>
+        <h6>020系统</h6>
+        <p>完善线下面对面服务</p>
+      </dd>
+    </dl>-->
+  </div>
+</div>
+<!--产品列表-->
+<div class="pro_list">
+<h1><strong>鑫财迷</strong><strong>鑫集市</strong><strong>鑫钱庄</strong><a href="ProList.html">查看更多>></a></h1>
+
+	<!--产品模块 start-->
+	<div class="pro_con1"> 
+      <!--产品图片-->
+  <!--<div class="pro_phone"><img src="images/img9.jpg" width="200" height="120" /></div>-->
+  <!--产品信息-->
+  <div class="pro_inf">
+  	<h4> <strong>8.2%</strong><br />预期年化收益率</h4>
+    <h2><strong>钱江新城建设第二期</strong></h2>    
+    <h3>
+      <p class="">投资期限&nbsp;<span class="">731天</span></p>
+      <p class="">起投金额：<span class="">10万元</span></p>
+      <p class="">已购人数：<span class="">25789人</span></p>
+      <p class="">计息日期：<span class="">2015-03-12</span></p>
+    </h3>
+    
+  </div>
+  <!--产品进度-->
+  <!--<div class="pro_rate">
+    <div class="pro_rate_line1"><div style="background:#ffa61a; width:68%; height:11px;"></div></div><div class="pro_rate_text">68%</div>
+      <div class="floatclear"></div>
+      <h5>剩余金额：<span>67万元</span></h5>
+    </div>-->
+    <!--产品购买按钮-->
+    <div class="pro_btn">
+      <input type="button" value="" />
+    </div>
+  </div>
+  <!--产品模块 end--> 
+  
+  <!--产品模块 start-->
+	<div class="pro_con2"> 
+      <!--产品图片-->
+  <!--<div class="pro_phone"><img src="images/img9.jpg" width="200" height="120" /></div>-->
+  <!--产品信息-->
+  <div class="pro_inf">
+  	<h4> <strong>8.2%</strong><br />预期年化收益率</h4>
+    <h2><strong>钱江新城建设第二期</strong></h2>    
+    <h3>
+      <p class="">投资期限&nbsp;<span class="">731天</span></p>
+      <p class="">起投金额：<span class="">10万元</span></p>
+      <p class="">已购人数：<span class="">25789人</span></p>
+      <p class="">计息日期：<span class="">2015-03-12</span></p>
+    </h3>
+    
+  </div>
+  <!--产品进度-->
+  <!--<div class="pro_rate">
+    <div class="pro_rate_line1"><div style="background:#ffa61a; width:68%; height:11px;"></div></div><div class="pro_rate_text">68%</div>
+      <div class="floatclear"></div>
+      <h5>剩余金额：<span>67万元</span></h5>
+    </div>-->
+    <!--产品购买按钮-->
+    <div class="pro_btn">
+      <input type="button" value="" />
+    </div>
+  </div>
+  <!--产品模块 end-->
+  
+  <!--产品模块 start-->
+	<div class="pro_con2"> 
+      <!--产品图片-->
+  <!--<div class="pro_phone"><img src="images/img9.jpg" width="200" height="120" /></div>-->
+  <!--产品信息-->
+  <div class="pro_inf">
+  	<h4> <strong>8.2%</strong><br />预期年化收益率</h4>
+    <h2><strong>钱江新城建设第二期</strong></h2>    
+    <h3>
+      <p class="">投资期限&nbsp;<span class="">731天</span></p>
+      <p class="">起投金额：<span class="">10万元</span></p>
+      <p class="">已购人数：<span class="">25789人</span></p>
+      <p class="">计息日期：<span class="">2015-03-12</span></p>
+    </h3>
+    
+  </div>
+  <!--产品进度-->
+  <!--<div class="pro_rate">
+    <div class="pro_rate_line1"><div style="background:#ffa61a; width:68%; height:11px;"></div></div><div class="pro_rate_text">68%</div>
+      <div class="floatclear"></div>
+      <h5>剩余金额：<span>67万元</span></h5>
+    </div>-->
+    <!--产品购买按钮-->
+    <div class="pro_btn">
+      <input type="button" value="" />
+    </div>
+  </div>
+  <!--产品模块 end-->
+  
+  <!--产品模块 start-->
+	<div class="pro_con2"> 
+      <!--产品图片-->
+  <!--<div class="pro_phone"><img src="images/img9.jpg" width="200" height="120" /></div>-->
+  <!--产品信息-->
+  <div class="pro_inf">
+  	<h4> <strong>8.2%</strong><br />预期年化收益率</h4>
+    <h2><strong>钱江新城建设第二期</strong></h2>    
+    <h3>
+      <p class="">投资期限&nbsp;<span class="">731天</span></p>
+      <p class="">起投金额：<span class="">10万元</span></p>
+      <p class="">已购人数：<span class="">25789人</span></p>
+      <p class="">计息日期：<span class="">2015-03-12</span></p>
+    </h3>
+    
+  </div>
+  <!--产品进度-->
+  <!--<div class="pro_rate">
+    <div class="pro_rate_line1"><div style="background:#ffa61a; width:68%; height:11px;"></div></div><div class="pro_rate_text">68%</div>
+      <div class="floatclear"></div>
+      <h5>剩余金额：<span>67万元</span></h5>
+    </div>-->
+    <!--产品购买按钮-->
+    <div class="pro_btn">
+      <input type="button" value="" />
+    </div>
+  </div>
+  <!--产品模块 end-->
+  	
+  
+  
+</div>
+<div class="floatclear"></div>
+</div>
+
+<!--新闻资讯-->
+<div class="news_info">
+	<div class="news_div">
+		<h2>
+			最新动态
+		</h2>
+		<ul>
+			<li><a href="#"><span>网站更网站更新公告哒哒哒网站更网站更新公告哒哒哒！</span><strong>2015-10-10</strong></a></li>
+			<li><a href="#"><span>网站更网站更新公告哒哒哒网站更网站更新公告哒哒哒！</span><strong>2015-10-10</strong></a></li>
+			<li><a href="#"><span>网站更网站更新公告哒哒哒网站更网站更新公告哒哒哒！</span><strong>2015-10-10</strong></a></li>
+			<li><a href="#"><span>网站更网站更新公告哒哒哒网站更网站更新公告哒哒哒！</span><strong>2015-10-10</strong></a></li>
+		</ul>
+		
+	</div>
+	<!--<div class="news_info_con" style=" padding-right:30px;">
+    	<h3><span onmouseover="document.getElementById('newslist1').style.display='';document.getElementById('newslist2').style.display='none';document.getElementById('newslist_title1').style.color='#d01a0b';document.getElementById('newslist_title2').style.color='#333';" id="newslist_title1" style="color:#d01a0b;">平台动态</span><strong>|</strong><span onmouseover="document.getElementById('newslist2').style.display='';document.getElementById('newslist1').style.display='none'; document.getElementById('newslist_title2').style.color='#d01a0b';document.getElementById('newslist_title1').style.color='#333';" id="newslist_title2">产品公告</span></h3>
+        <ul id="newslist1">
+        	<li><a href="#">网站更网站更新公告哒哒哒网站更网站更新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">更站网站更网站更新公告哒哒哒更新</a><span>01-14</span></li>
+            <li><a href="#">哒网站更网站更新公告哒哒哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">更站网站更网站更新公告哒哒哒哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">哒哒网站更网站更网站更新公告哒哒哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">网站网站更网站更网站更新公告哒哒哒网站更哒哒哒！</a><span>01-14</span></li>
+        </ul>
+        <ul id="newslist2" style=" display:none;">
+        	<li><a href="#">公告哒哒新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">公告哒哒公告哒哒新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">网站更新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">新公告哒哒哒！</a><span>01-14</span></li>
+        </ul>
+    </div>-->
+    
+    <!--<div class="news_info_con" style="border:0; padding-left:30px;">
+    	<h3><span onmouseover="document.getElementById('newslist3').style.display='';document.getElementById('newslist4').style.display='none';document.getElementById('newslist_title3').style.color='#d01a0b';document.getElementById('newslist_title4').style.color='#333';" id="newslist_title3" style="color:#d01a0b;">媒体报道</span><strong>|</strong><span onmouseover="document.getElementById('newslist4').style.display='';document.getElementById('newslist3').style.display='none'; document.getElementById('newslist_title4').style.color='#d01a0b';document.getElementById('newslist_title3').style.color='#333';" id="newslist_title4">行业动态</span></h3>
+        <ul id="newslist3">
+        	<li><a href="#">网站更网站更新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">更站更新</a><span>01-14</span></li>
+            <li><a href="#">哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">更站哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">哒哒网站更哒哒！</a><span>01-14</span></li>
+            <li><a href="#">网站网站更网站更哒哒哒！</a><span>01-14</span></li>
+        </ul>
+        <ul id="newslist4" style="display:none">
+        	<li><a href="#">公告哒哒新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">公告哒哒公告哒哒新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">网站更新公告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">告哒哒哒！</a><span>01-14</span></li>
+            <li><a href="#">新公告哒哒哒！</a><span>01-14</span></li>
+        </ul>
+    </div>-->
+    <div class="floatclear"></div>
+</div>
+<!--合作伙伴-->
+<div class="partners_bg">
+	<div class="partners">
+    <h1>合作伙伴</h1>
+    	<a href="#"><img src="images/img12.jpg" width="148" height="54" /></a>
+        <a href="#"><img src="images/img12.jpg" width="148" height="54" /></a>
+        <a href="#"><img src="images/img12.jpg" width="148" height="54" /></a>
+        <a href="#"><img src="images/img12.jpg" width="148" height="54" /></a>
+        <a href="#"><img src="images/img12.jpg" width="148" height="54" /></a>
+        <a href="#"><img src="images/img12.jpg" width="148" height="54" /></a>
+        <a href="#"><img src="images/img12.jpg" width="148" height="54" /></a>
+    </div>
+</div>
+<div class="footer_bg1">
+  <div class="footer_bg2">
+    <div class="footer">
+      <div class="footer_con">
+      	<div class="links">
+      		<h2>友情链接</h2>
+      		<div class="floatclear"></div>
+      		<dl>      		
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		<dd><a href="#">慧聪金融</a></dd>
+      		</dl>
+      	</div>
+      	
+      	
+        <div class="footer_logo"><a href="#"><img src="images/footer_logo.png" width="159" height="106" /></a></div>
+        <div class="footer_nav">
+          <h5>关于我们</h5>
+          <p><a href="#">平台简介</a> <a href="#">运营模式</a> <a href="#">平台证照</a> <a href="#">平台优势</a> <a href="#">合作伙伴</a> <a href="#">联系我们</a></p>
+          <h5>主要项目</h5>
+          <p><a href="#">民生宝</a> <a href="#">五水融</a> <a href="#">运财宝</a> <a href="#">PPPe宝</a> <a href="#">定制e盈</a></p>
+          <h5>其他</h5>
+          <p><a href="#">安全保障</a> <a href="#">服务指南</a> <a href="#">推荐规则</a> <a href="#">转让规则</a> <a href="#">免责声明</a></p>
+        </div>
+        <div class="footer_contact">
+          <h4>400电话客服<br />
+            （工作时间 周一至周五8:30-17:00）</h4>
+          <h3>4000-000-000</h3>
+          <div class="ico_contact"> <a href="#" class="ico_sina"></a> <a href="#" class="ico_qq">400855855</a>
+            <div class="floatclear"></div>
+          </div>
+          <div class="ico_contact"> <a href="#" class="ico_wx"></a> <a href="#" class="ico_email">6f564654@sina.com</a>
+            <div class="floatclear"></div>
+          </div>
+        </div>
+        <div class="footer_join"> <a href="#">申请加盟</a> <a href="#">加盟规则</a> </div>
+      </div>
+      <div class="copyright">
+        <div class="footer_ico"><img src="images/img1.png" width="99" height="35" /><img src="images/img2.png" width="99" height="35" /><img src="images/img3.png" width="39" height="35" /><img src="images/img4.png" width="39" height="35" /><img src="images/img5.png" width="99" height="35" /></div>
+        <p>464654@qq.com 浙icp备4564646号-1<br />
+          法律顾问：浙江文三路事务所</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
